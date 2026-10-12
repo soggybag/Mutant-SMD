@@ -36,6 +36,8 @@
 - **MCP6002:** < 1 mA.
 - **Matrix:** brightness 4/15 in normal use, ~1.4 mA per lit LED, so ~45 mA half-lit and ~90 mA all lit. The start-up sweep runs to 15/15 briefly (up to ~300 mA for a moment).
 - **Total typical:** ~70–120 mA.
+- **LCSC numbers (2026-10-11):** every SMD part has one. U1 = **L78M05ABDT-TR C58069** (the AB grade is JLC's Basic part; same regulator, tighter tolerance). The 10µ caps (C1, C2, C10, C14) = **CL31A106KBHNNNE 50 V X5R 1206, C13585**; check Basic/Extended when ordering. Others are the proven parts from earlier boards (resistors C17513/C17414/C17560/C149504/C17710, 100n C49678, 10n C1710, 1n C46653, SS14 C2480, BAT54S C19726, MCP6002 C7377).
+- **Why 50 V for the 10µ ceramics:** X5R loses capacitance with DC bias. A 25 V 1206 holds only ~3–5 µF at 12 V; the 50 V part holds ~5–7 µF (the 78M05 needs only 0.33 µF in / 0.1 µF out). All-ceramic input + Eurorack cable can ring to ~2× the rail on hot-plug (~24 V): fine for a 50 V cap and the 78M05 (35 V max), marginal for 25 V. An electrolytic on VRAW would add damping but isn't needed.
 - **LM78M05 dissipation at 12 V in:** (11.7 − 5) × 0.1 A ≈ 0.7 W. That's fine for a DPAK on ~2 cm² of copper. At 9 V in it's about half.
 
 ## Board plan (next)
@@ -69,4 +71,4 @@
 - **Pots:** the left column is rotated 180° so their pins stay on the board. Middle and right have their pins to the left.
 - **D2** (the 9 V input diode) sits beside the barrel jack. A long V9 run to the middle band wouldn't route.
 - **Under the matrix module** (on 8.5 mm sockets): the audio filter / MCP6002 and the sync parts.
-- **Not done yet:** silkscreen pass (labels, J1 stripe, version), JLC files, LCSC numbers for the new parts (L78M05 DPAK, BAT54S checked = C19726, SS14 = C2480, MCP6002 = C7377 from GlitchStorm), a 3D height check of the matrix module vs the panel.
+- **Not done yet:** silkscreen pass (labels, J1 stripe, version), JLC files, a 3D height check of the matrix module vs the panel.

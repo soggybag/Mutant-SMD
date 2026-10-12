@@ -24,10 +24,13 @@ def lab(n, p, side='r'): s.label(n, p, side)
 def to_lab(p, name, dx, side='r'):
     q = (p[0] + dx, p[1]); W(p, q); lab(name, q, side)
 FR = 'Resistor_SMD:R_0805_2012Metric'; FC = 'Capacitor_SMD:C_0805_2012Metric'; FC12 = 'Capacitor_SMD:C_1206_3216Metric'
-def Rh(ref, v, cx, y, d='', text='t'): s.part(ref, 'Device', 'R', v, cx, y, 90, fp=FR, desc=d, text=text)
-def Rv(ref, v, x, cy, side='r', d=''): s.part(ref, 'Device', 'R', v, x, cy, 0, fp=FR, desc=d, text=side)
-def Ch(ref, v, cx, y, d='', text='t', fp=FC): s.part(ref, 'Device', 'C', v, cx, y, 90, fp=fp, desc=d, text=text)
-def Cv(ref, v, x, cy, side='r', d='', fp=FC): s.part(ref, 'Device', 'C', v, x, cy, 0, fp=fp, desc=d, text=side)
+# JLC part numbers (proven on earlier boards; 10u = Samsung CL31A106KBHNNNE 50 V X5R 1206)
+LR = {'470': 'C17710', '1k': 'C17513', '10k': 'C17414', '22k': 'C17560', '100k': 'C149504'}
+LC = {'1n': 'C46653', '10n': 'C1710', '100n': 'C49678', '10u': 'C13585'}
+def Rh(ref, v, cx, y, d='', text='t'): s.part(ref, 'Device', 'R', v, cx, y, 90, fp=FR, desc=d, text=text, lcsc=LR[v])
+def Rv(ref, v, x, cy, side='r', d=''): s.part(ref, 'Device', 'R', v, x, cy, 0, fp=FR, desc=d, text=side, lcsc=LR[v])
+def Ch(ref, v, cx, y, d='', text='t', fp=FC): s.part(ref, 'Device', 'C', v, cx, y, 90, fp=fp, desc=d, text=text, lcsc=LC[v])
+def Cv(ref, v, x, cy, side='r', d='', fp=FC): s.part(ref, 'Device', 'C', v, x, cy, 0, fp=fp, desc=d, text=side, lcsc=LC[v])
 HAND = dict(bom=False)
 
 # ================================================================ POWER
@@ -54,9 +57,9 @@ for i, (ref, name, y) in enumerate((('D1', 'V12', g(10)), ('D2', 'V9', g(16)))):
 W((g(36), g(10)), (g(36), g(16)))
 vr = (g(36), g(13))
 W(vr, (g(42), vr[1]))
-Cv('C1', '10u', g(40), vr[1] + 3.81 + g(1), d='VRAW bulk (25 V)', fp=FC12); W((g(40), vr[1]), (g(40), vr[1] + g(1)), P('C1', '1')); GND(P('C1', '2'))
+Cv('C1', '10u', g(40), vr[1] + 3.81 + g(1), d='VRAW bulk (50 V: holds ~5-7 uF at 12 V, margin for hot-plug ringing)', fp=FC12); W((g(40), vr[1]), (g(40), vr[1] + g(1)), P('C1', '1')); GND(P('C1', '2'))
 s.part('U1', 'Regulator_Linear', 'LM78M05_TO252', 'L78M05', g(50), vr[1], 0, fp='Package_TO_SOT_SMD:TO-252-2',
-       desc='5 V regulator, 0.5 A DPAK: give the tab plenty of copper (~0.5-1 W at 12 V in)', text='t')
+       desc='5 V regulator, 0.5 A DPAK: give the tab plenty of copper (~0.5-1 W at 12 V in)', text='t', lcsc='C58069')
 W((g(42), vr[1]), P('U1', '1')); GND(P('U1', '2'))
 vo = (g(58), vr[1]); W(P('U1', '3'), vo); V5((vo[0], vo[1]))
 Cv('C2', '10u', g(56), vr[1] + 3.81 + g(1), d='+5V bulk', fp=FC12); W((g(56), vr[1]), (g(56), vr[1] + g(1)), P('C2', '1')); GND(P('C2', '2'))
