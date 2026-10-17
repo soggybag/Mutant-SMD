@@ -538,6 +538,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -979,6 +980,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1139,6 +1141,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1236,7 +1239,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C12"
-			(at 0 -1.68 90)
+			(at -3.25 0 90)
 			(layer "F.SilkS")
 			(uuid "1319dfda-8034-439c-b6ae-fbd52a78121f")
 			(effects
@@ -1299,6 +1302,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1459,6 +1463,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1556,7 +1561,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW4"
-			(at 0 -7.5 0)
+			(at -5.987 5.03 0)
 			(layer "F.SilkS")
 			(uuid "ab6c4399-6393-46d5-97f7-74c1519868b1")
 			(effects
@@ -1567,7 +1572,7 @@
 			)
 		)
 		(property "Value" "START"
-			(at 0 7.5 0)
+			(at -4.237 6.53 0)
 			(layer "F.Fab")
 			(uuid "3a642c46-efe6-4664-b8d5-3b63828197d6")
 			(effects
@@ -1746,7 +1751,7 @@
 			)
 		)
 		(property "Value" "B10k"
-			(at 0 9.86 180)
+			(at -3.237 7.43 180)
 			(layer "F.Fab")
 			(uuid "2599386e-5c5c-4926-ace6-4158073b9045")
 			(effects
@@ -2117,6 +2122,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2246,7 +2252,7 @@
 				)
 			)
 		)
-		(property "Description" "VRAW bulk (25 V)"
+		(property "Description" "VRAW bulk (50 V: holds ~5-7 uF at 12 V, margin for hot-plug ringing)"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2277,6 +2283,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2437,6 +2444,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2597,6 +2605,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2757,6 +2766,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2854,7 +2864,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R2"
-			(at 0 -1.65 90)
+			(at -2.75 0 90)
 			(layer "F.SilkS")
 			(uuid "169b84f8-e567-46d9-a469-55731864bbf2")
 			(effects
@@ -2917,6 +2927,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3077,6 +3088,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3333,7 +3345,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C15"
-			(at 0 -1.68 90)
+			(at -3.25 -0.1 90)
 			(layer "F.SilkS")
 			(uuid "27170667-8d8b-4296-8576-b5da60c4ad02")
 			(effects
@@ -3396,6 +3408,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3493,7 +3506,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW5"
-			(at 0 -7.5 0)
+			(at 5.263 5.56 0)
 			(layer "F.SilkS")
 			(uuid "b1f46104-dc7f-41c3-8e93-248843bcf4a2")
 			(effects
@@ -3504,7 +3517,7 @@
 			)
 		)
 		(property "Value" "REC"
-			(at 0 7.5 0)
+			(at 3.763 6.81 0)
 			(layer "F.Fab")
 			(uuid "f74675a4-cd2e-4ba0-8200-33ba4615c5a7")
 			(effects
@@ -3735,6 +3748,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3834,7 +3848,7 @@
 		(property "Reference" "RV3"
 			(at 6.71 -4.64 180)
 			(layer "F.SilkS")
-			(uuid "714898cc-b03b-447e-8eb9-dff91d9f3e71")
+			(uuid "b3a5c6ca-b33d-44f7-aa78-9070f0721891")
 			(effects
 				(font
 					(size 1 1)
@@ -3843,9 +3857,9 @@
 			)
 		)
 		(property "Value" "B10k"
-			(at 0 9.86 180)
+			(at -3.405 7.18 180)
 			(layer "F.Fab")
-			(uuid "c2d1bf7b-24de-4efb-8495-97c7e3524bb6")
+			(uuid "b7a269f7-b995-4f0f-b041-a9b0fbffb2f5")
 			(effects
 				(font
 					(size 1 1)
@@ -3858,7 +3872,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "581f097e-0f6e-4346-bab5-c1f629c7049b")
+			(uuid "ff608d4f-5a6b-4d5f-9844-c3de19ea5133")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3871,7 +3885,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1f07ee39-713b-45f8-8701-04c9758a1a52")
+			(uuid "27ef6cc9-db17-4f98-8cba-f7b71a267062")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4214,6 +4228,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4745,6 +4760,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4905,6 +4921,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5002,7 +5019,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C13"
-			(at 0 -1.68 90)
+			(at -3.25 0 90)
 			(layer "F.SilkS")
 			(uuid "ceeeaf05-ab22-4126-9dd6-9a1cf5d9a57c")
 			(effects
@@ -5065,6 +5082,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5162,7 +5180,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW3"
-			(at 0 -7.5 0)
+			(at 6.075 5.09 0)
 			(layer "F.SilkS")
 			(uuid "4122cd80-5c0f-467a-9d1f-f74d600241ba")
 			(effects
@@ -5173,7 +5191,7 @@
 			)
 		)
 		(property "Value" "SCALE"
-			(at 0 7.5 0)
+			(at 4.325 6.59 0)
 			(layer "F.Fab")
 			(uuid "067362bb-144f-4fee-9a1b-0c09c31bf35b")
 			(effects
@@ -5404,6 +5422,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5501,7 +5520,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW1"
-			(at 0 -7.5 0)
+			(at 6.177 5.03 0)
 			(layer "F.SilkS")
 			(uuid "c2dca106-ba97-4812-a3b6-f49b28c878db")
 			(effects
@@ -5512,7 +5531,7 @@
 			)
 		)
 		(property "Value" "FUNC"
-			(at 0 7.5 0)
+			(at 3.927 6.53 0)
 			(layer "F.Fab")
 			(uuid "8e2f7538-ab97-470d-8217-8837c425fe84")
 			(effects
@@ -5743,6 +5762,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5840,7 +5860,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW6"
-			(at 0 -7.5 0)
+			(at -7.487 3.865 0)
 			(layer "F.SilkS")
 			(uuid "47d93ba5-6593-40e4-8215-f19570a7f0fc")
 			(effects
@@ -5851,7 +5871,7 @@
 			)
 		)
 		(property "Value" "RETRIG"
-			(at 0 7.5 0)
+			(at -6.487 5.615 0)
 			(layer "F.Fab")
 			(uuid "b3f2c9d5-80e4-4844-be81-875aa2fe3f49")
 			(effects
@@ -6019,7 +6039,7 @@
 		(descr "Potentiometer, vertical, 9mm, single, http://www.taiwanalpha.com.tw/downloads?target=products&id=113")
 		(tags "potentiometer vertical 9mm single")
 		(property "Reference" "RV4"
-			(at 6.71 -4.64 0)
+			(at 2.573 8.32 0)
 			(layer "F.SilkS")
 			(uuid "f33b9099-844d-45c1-ab9b-b1c74b1037dd")
 			(effects
@@ -6030,7 +6050,7 @@
 			)
 		)
 		(property "Value" "B10k"
-			(at 0 9.86 0)
+			(at -3.177 -2.18 0)
 			(layer "F.Fab")
 			(uuid "1eb5eca5-6a4f-4b2e-8aca-e5998966ca98")
 			(effects
@@ -6619,7 +6639,7 @@
 		(descr "Potentiometer, vertical, 9mm, single, http://www.taiwanalpha.com.tw/downloads?target=products&id=113")
 		(tags "potentiometer vertical 9mm single")
 		(property "Reference" "RV1"
-			(at 6.71 -4.64 180)
+			(at -2.655 -2.639 180)
 			(layer "F.SilkS")
 			(uuid "9bc86724-a974-47f3-8418-e388428be1fa")
 			(effects
@@ -6630,7 +6650,7 @@
 			)
 		)
 		(property "Value" "B10k"
-			(at 0 9.86 180)
+			(at -3.155 -1.389 180)
 			(layer "F.Fab")
 			(uuid "b250609c-0560-4ca2-977b-19c522127d16")
 			(effects
@@ -6938,7 +6958,7 @@
 		(descr "Potentiometer, vertical, 9mm, single, http://www.taiwanalpha.com.tw/downloads?target=products&id=113")
 		(tags "potentiometer vertical 9mm single")
 		(property "Reference" "RV2"
-			(at 6.71 -4.64 0)
+			(at -2.677 -1.111 0)
 			(layer "F.SilkS")
 			(uuid "86a5195d-48e0-470e-b119-301932ecc5c0")
 			(effects
@@ -6949,7 +6969,7 @@
 			)
 		)
 		(property "Value" "B10k"
-			(at 0 9.86 0)
+			(at -3.177 -2.361 0)
 			(layer "F.Fab")
 			(uuid "ab1c997a-f8d8-4494-b04d-5dce472d6acb")
 			(effects
@@ -7320,6 +7340,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7428,7 +7449,7 @@
 			)
 		)
 		(property "Value" "OUT"
-			(at 0 5 0)
+			(at -0.013 -2.335 0)
 			(layer "F.Fab")
 			(uuid "615b89d3-5c6b-4b95-839e-65b197418189")
 			(effects
@@ -7769,7 +7790,7 @@
 		(descr "Through hole straight socket strip, 1x05, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x05 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.77 180)
+			(at -2.738 -0.147 180)
 			(layer "F.SilkS")
 			(uuid "9aa0882b-7604-4aad-b409-c3c1b96405dc")
 			(effects
@@ -7780,7 +7801,7 @@
 			)
 		)
 		(property "Value" "MATRIX OUT"
-			(at 0 12.93 180)
+			(at -2.738 7.353 270)
 			(layer "F.Fab")
 			(uuid "7b347b6c-2463-409c-a62e-97d0395b79f5")
 			(effects
@@ -8055,7 +8076,7 @@
 		(descr "Through hole straight socket strip, 1x05, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x05 2.54mm single row")
 		(property "Reference" "J3"
-			(at 0 -2.77 180)
+			(at 2.798 -0.147 180)
 			(layer "F.SilkS")
 			(uuid "cdcbd628-d892-4d5e-9744-a5a7b78b250a")
 			(effects
@@ -8066,7 +8087,7 @@
 			)
 		)
 		(property "Value" "MATRIX IN"
-			(at 0 12.93 180)
+			(at 2.548 7.853 270)
 			(layer "F.Fab")
 			(uuid "37fb0e51-ecd9-4909-9dd5-00948ca2b3a5")
 			(effects
@@ -8341,7 +8362,7 @@
 		(descr "Round 12 mm push button, 9 mm cap, 4 pins on 5.00 x 5.00 mm (DAIER TSL-A064, Tayda A-8796; same layout as E-Switch KS01Q01). Pins 1-2 and 3-4 are joined inside, so only the DIAGONAL pads 1 and 2 here are wired: works in any orientation. Origin = body centre")
 		(tags "push button round 12mm tact DAIER TSL-A064 KS01Q01")
 		(property "Reference" "SW2"
-			(at 0 -7.5 0)
+			(at 6.177 5.06 0)
 			(layer "F.SilkS")
 			(uuid "24faedbd-af2e-45f2-8dd7-6e2f4d5c4f12")
 			(effects
@@ -8352,7 +8373,7 @@
 			)
 		)
 		(property "Value" "TONIC"
-			(at 0 7.5 0)
+			(at 4.427 6.56 0)
 			(layer "F.Fab")
 			(uuid "07f87fd0-82dc-4f1e-b39f-d45b91abaccc")
 			(effects
@@ -8520,7 +8541,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at 0 -1.65 90)
+			(at -2.75 0 90)
 			(layer "F.SilkS")
 			(uuid "74229fa9-c8ca-48c6-b78a-32555f9b841d")
 			(effects
@@ -8583,6 +8604,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9010,7 +9032,7 @@
 			)
 		)
 		(property "Value" "SYNC IN"
-			(at 0 5 0)
+			(at 4.044 -2.335 0)
 			(layer "F.Fab")
 			(uuid "54a0af3d-871a-4f78-a127-622e66a77369")
 			(effects
@@ -9414,6 +9436,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9522,7 +9545,7 @@
 			)
 		)
 		(property "Value" "SYNC OUT"
-			(at 0 5 0)
+			(at -4.734 -2.31 0)
 			(layer "F.Fab")
 			(uuid "1b40ea1e-0ecb-44b7-ae43-35f4e4073b3c")
 			(effects
