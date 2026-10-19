@@ -23,6 +23,7 @@
 | Sync in | 22k series + **BAT54S** clamp to 0 / 5 V + 100k pull-down | Eurorack gates (5–12 V) would exceed the Nano's 5.5 V pin limit |
 | Sync out | 1k series | Protects D2 from shorts and hot-plugging |
 | Audio | **2nd-order RC (1k/10n + 10k/1n, ~16 kHz) → MCP6002 follower → 10µ → 470 Ω**, 100k bleed | Less PWM whine, low output impedance, ~5 Vpp (fine for modular or line) |
+| Matrix supply (2026-10-19) | **R8 2.2 Ω (1206) + C16 100µ tantalum** (KEMET T491B, 3528) feed the module's own rail **V5M**; C10 10µ / C11 100n moved onto V5M | The MAX7219 multiplexes at ~800 Hz with current pulses up to ~300 mA. On a shared 5 V they wobble the Nano's rail, and D9's PWM high level *is* that rail, so the wobble lands in the audio as a whine no output filter can remove. R8/C16 (~720 Hz low-pass) let C16 supply the pulses |
 | Pots | **Alpha RD901F 9 mm B10k** + **100n on each wiper** | Tayda-sourced; quieter readings |
 | Buttons | **Tayda A-8796** (round Ø12 body, Ø9 cap, 4 pins on a 5 mm square) | As GlitchStorm v3. 14.7 mm tall, so the cap clears a panel ~10 mm above the board |
 | Passives | 0805 / 1206 SMD | JLC assembly |
@@ -36,6 +37,8 @@
 - **MCP6002:** < 1 mA.
 - **Matrix:** brightness 4/15 in normal use, ~1.4 mA per lit LED, so ~45 mA half-lit and ~90 mA all lit. The start-up sweep runs to 15/15 briefly (up to ~300 mA for a moment).
 - **Total typical:** ~70–120 mA.
+- **R8 drop:** ~0.1–0.2 V in normal use; ~0.66 V (V5M ≈ 4.3 V, MAX7219 min 4.0 V) and ~0.2 W in R8 only during the 15/15 start-up sweep.
+- **Extended parts added for the filter (~$3 fee each):** R8 2.2 Ω 1206 Uniroyal 1206W4J022JT5E **C25369**; C16 KEMET T491B107K010AT **C122271**. No 2.2 Ω or suitable bulk cap is a JLC Basic part.
 - **LCSC numbers (2026-10-11):** every SMD part has one. U1 = **L78M05ABDT-TR C58069** (the AB grade is JLC's Basic part; same regulator, tighter tolerance). The 10µ caps (C1, C2, C10, C14) = **CL31A106KBHNNNE 50 V X5R 1206, C13585**; check Basic/Extended when ordering. Others are the proven parts from earlier boards (resistors C17513/C17414/C17560/C149504/C17710, 100n C49678, 10n C1710, 1n C46653, SS14 C2480, BAT54S C19726, MCP6002 C7377).
 - **Why 50 V for the 10µ ceramics:** X5R loses capacitance with DC bias. A 25 V 1206 holds only ~3–5 µF at 12 V; the 50 V part holds ~5–7 µF (the 78M05 needs only 0.33 µF in / 0.1 µF out). All-ceramic input + Eurorack cable can ring to ~2× the rail on hot-plug (~24 V): fine for a 50 V cap and the 78M05 (35 V max), marginal for 25 V. An electrolytic on VRAW would add damping but isn't needed.
 - **LM78M05 dissipation at 12 V in:** (11.7 − 5) × 0.1 A ≈ 0.7 W. That's fine for a DPAK on ~2 cm² of copper. At 9 V in it's about half.

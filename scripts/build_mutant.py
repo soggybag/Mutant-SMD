@@ -7,6 +7,8 @@ for JLC SMD assembly on a board no larger than 100 mm, usable bare, behind a Eur
     (internal pull-ups), D7/D11/D13 = MAX7219 module CS/DIN/CLK, D8 sync in, D2 sync out, D9 audio PWM.
   - Pots: 6x B10k 9 mm (Alpha RD901F), 100n on each wiper. Buttons: 6x Tayda A-8796 (as GlitchStorm v3).
   - LED matrix: the standard MAX7219 8x8 plug-in module on two 1x5 headers (in header wired, out header mechanical).
+    Its own supply V5M = +5V through R8 2R2 with C16 100u tantalum + C10/C11 (v1.0, 2026-10-19): the module's multiplex
+    current pulses come from C16, not the Nano's 5 V, which is also the D9 audio PWM's high level.
   - Audio: D9 -> 1k/10n -> 10k/1n (2nd order, ~16 kHz) -> MCP6002 follower -> 10u -> 470 R -> OUT (100k bleed).
   - Sync in: 22k series, BAT54S clamp to 0 / +5V, 100k pull-down (safe for Eurorack gates up to ~12 V, Volca pulses).
   - Sync out: 1k series.
@@ -115,13 +117,22 @@ s.part('J3', 'Connector_Generic', 'Conn_01x05', 'MATRIX IN', g(80), g(56), 0, fp
        desc='MAX7219 module input header: VCC GND DIN CS CLK', text='t', **HAND)
 for pin, name in (('3', 'MOSI'), ('4', 'CS'), ('5', 'SCK')):
     to_lab(P('J3', pin), name, -g(4), 'l')
-q = P('J3', '1'); W(q, (q[0] - g(9), q[1])); V5((q[0] - g(9), q[1]))
+q = P('J3', '1')
+s.part('R8', 'Device', 'R', '2R2', q[0] - g(6), q[1], 90, fp='Resistor_SMD:R_1206_3216Metric', lcsc='C25369',
+       desc='Matrix supply filter: with C16, keeps the MAX7219 multiplex pulses off the Nano / audio 5 V (1206: ~0.2 W worst case)',
+       text=((q[0] - g(6), q[1] - g(2.6)), (q[0] - g(6), q[1] - g(1.6)), None))
+W(P('R8', '1'), (q[0] - g(9), q[1])); V5((q[0] - g(9), q[1]))
+W(P('R8', '2'), (q[0] - g(3), q[1]), q)
+W((q[0] - g(3), q[1]), (q[0] - g(3), q[1] - g(3))); lab('V5M', (q[0] - g(3), q[1] - g(3)))
 q = P('J3', '2'); W(q, (q[0] - g(11), q[1]), (q[0] - g(11), q[1] + g(9))); GND((q[0] - g(11), q[1] + g(9)))
 s.part('J4', 'Connector_Generic', 'Conn_01x05', 'MATRIX OUT', g(108), g(56), 0, fp='Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical',
        desc='MAX7219 module output header: mechanical support only', text='t', **HAND)
 for pin in '12345': s.noconnect(P('J4', pin))
-Cv('C10', '10u', g(90), g(60), d='Matrix supply (local)', fp=FC12); V5(P('C10', '1')); GND(P('C10', '2'))
-Cv('C11', '100n', g(94), g(60), d='Matrix supply (local)'); V5(P('C11', '1')); GND(P('C11', '2'))
+Cv('C10', '10u', g(90), g(60), d='Matrix supply (local)', fp=FC12); lab('V5M', P('C10', '1')); GND(P('C10', '2'))
+Cv('C11', '100n', g(94), g(60), d='Matrix supply (local)'); lab('V5M', P('C11', '1')); GND(P('C11', '2'))
+s.part('C16', 'Device', 'C_Polarized', '100u', g(99), g(60), 0, fp='Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B', lcsc='C122271',
+       desc='Matrix supply reservoir: 100u 10 V tantalum (KEMET T491B107K010AT); with R8 ~720 Hz low-pass', text='r')
+lab('V5M', P('C16', '1')); GND(P('C16', '2'))
 
 # ================================================================ AUDIO OUT
 s.box('AUDIO OUT: D9 PWM -> 2nd-order RC (~16 kHz) -> MCP6002 buffer -> OUT', g(122), g(44), g(162), g(72))
@@ -177,5 +188,5 @@ notes = ('Redesign of the Mutant Eurorack module (MeeBleeps Mutant synth) for SM
          'Bare / Eurorack: fit J1 (10-pin). Enclosure: fit J2 (9 V barrel). Both can be fitted (diode-OR).',
          'Firmware: Mutant_Updated (Mozzi 2), unchanged pin map.')
 for i, t in enumerate(notes): s.text(t, g(122), g(80 + 2.5 * i), 1.4)
-s.write(OUT, shift=(g(4), g(4)), title_block={'title': 'Mutant SMD', 'rev': '0.1', 'company': 'Super-Freq',
+s.write(OUT, shift=(g(4), g(4)), title_block={'title': 'Mutant SMD', 'rev': '1.0', 'company': 'Super-Freq',
         'comments': ['MeeBleeps Mutant generative synth, SMD redesign, <= 100 mm board', 'Eurorack 10-pin and/or 9 V barrel power, Nano on headers']})
