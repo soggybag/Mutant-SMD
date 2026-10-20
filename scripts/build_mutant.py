@@ -144,7 +144,7 @@ Rh('R2', '10k', n1[0] + g(1) + 3.81, g(52), d='PWM filter 2'); W(n1, P('R2', '1'
 n2 = (P('R2', '2')[0] + g(1), g(52)); W(P('R2', '2'), n2)
 Cv('C13', '1n', n2[0], n2[1] + 3.81 + g(1), d='PWM filter 2'); W(n2, (n2[0], n2[1] + g(1)), P('C13', '1')); GND(P('C13', '2'))
 s.part('U2', 'Amplifier_Operational', 'MCP6002-xSN', 'MCP6002', n2[0] + g(6), g(52) + 2.54, 0, unit=1, fp='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',
-       desc='Rail-to-rail output buffer', text='ic', lcsc='C7377')
+       desc='Rail-to-rail output buffer', text='ic', lcsc='C7377', extra={'FT Rotation Offset': '270'})
 W(n2, P('U2', '3'))
 o = P('U2', '1'); m = P('U2', '2')
 W(o, (o[0] + g(1), o[1]), (o[0] + g(1), m[1] + g(2)), (m[0] - g(1), m[1] + g(2)), (m[0] - g(1), m[1]), m)
@@ -155,11 +155,11 @@ Rh('R4', '470', no[0] + g(1) + 3.81, no[1], d='Output protection'); W(no, P('R4'
 s.part('J5', 'Connector_Audio', 'AudioJack2_SwitchT', 'OUT', P('R4', '2')[0] + g(5) + 5.08, no[1], 180,
        fp='Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles', desc='Audio out (Thonkiconn PJ398SM)', text='t', **HAND)
 W(P('R4', '2'), P('J5', 'T')); GND(P('J5', 'S')); s.noconnect(P('J5', 'TN'))
-s.part('U2', 'Amplifier_Operational', 'MCP6002-xSN', 'MCP6002', g(130), g(66), 0, unit=2, fp='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm', text='ic', lcsc='C7377')
+s.part('U2', 'Amplifier_Operational', 'MCP6002-xSN', 'MCP6002', g(130), g(66), 0, unit=2, fp='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm', text='ic', lcsc='C7377', extra={'FT Rotation Offset': '270'})
 q = P('U2', '5'); W(q, (q[0] - g(1), q[1])); GND((q[0] - g(1), q[1]))
 o2 = P('U2', '7'); m2 = P('U2', '6'); W(o2, (o2[0] + g(1), o2[1]), (o2[0] + g(1), m2[1] + g(2)), (m2[0] - g(1), m2[1] + g(2)), (m2[0] - g(1), m2[1]), m2)
 s.text('U2B unused: follower parked at 0 V.', g(136), g(70))
-s.part('U2', 'Amplifier_Operational', 'MCP6002-xSN', 'MCP6002', g(154), g(66), 0, unit=3, fp='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm', text='ic', lcsc='C7377')
+s.part('U2', 'Amplifier_Operational', 'MCP6002-xSN', 'MCP6002', g(154), g(66), 0, unit=3, fp='Package_SO:SOIC-8_3.9x4.9mm_P1.27mm', text='ic', lcsc='C7377', extra={'FT Rotation Offset': '270'})
 V5(P('U2', '8')); GND(P('U2', '4'))
 Cv('C15', '100n', g(158), g(66), d='U2 decoupling'); V5(P('C15', '1')); GND(P('C15', '2'))
 
@@ -174,7 +174,7 @@ Rv('R6', '100k', ns[0], ns[1] + g(1) + 3.81, d='Sync in pull-down'); W(ns, P('R6
 W(ns, (ns[0], ns[1] - g(5)), (ns[0] + g(2), ns[1] - g(5))); lab('SYNC_IN_D', (ns[0] + g(2), ns[1] - g(5)))
 ns2 = (ns[0] + g(5), ns[1]); W(ns, ns2)
 # BAT54S: pin 1 = anode of the lower diode -> GND, pin 2 = cathode of the upper diode -> +5V, COM = node
-s.part('D3', 'Diode', 'BAT54S', 'BAT54S', ns2[0] + 5.08, ns2[1], 90, mirror='y', fp='Package_TO_SOT_SMD:SOT-23', desc='Sync in clamp to 0 V / +5V', text='r', lcsc='C19726')
+s.part('D3', 'Diode', 'BAT54S', 'BAT54S', ns2[0] + 5.08, ns2[1], 90, mirror='y', fp='Package_TO_SOT_SMD:SOT-23', desc='Sync in clamp to 0 V / +5V', text='r', lcsc='C19726', extra={'FT Rotation Offset': '180'})
 W(ns2, P('D3', '3'))
 GND(P('D3', '1')); V5(P('D3', '2'))
 lab('SYNC_OUT_D', (g(64), g(88)), 'l')

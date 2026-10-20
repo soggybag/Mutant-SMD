@@ -12362,6 +12362,15 @@
 				)
 			)
 		)
+		(property "FT Rotation Offset" "270"
+			(at 365.76 144.78 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aaa6a76c-30f8-4041-9979-26c697a54960")
 		)
@@ -12874,6 +12883,15 @@
 				)
 			)
 		)
+		(property "FT Rotation Offset" "270"
+			(at 340.36 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "a4c17015-12e7-4131-a36f-92e0eed84423")
 		)
@@ -13012,6 +13030,15 @@
 			)
 		)
 		(property "LCSC" "C7377"
+			(at 401.32 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FT Rotation Offset" "270"
 			(at 401.32 177.8 0)
 			(hide yes)
 			(effects
@@ -13785,6 +13812,15 @@
 			)
 		)
 		(property "LCSC" "C19726"
+			(at 78.74 233.68 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FT Rotation Offset" "180"
 			(at 78.74 233.68 90)
 			(hide yes)
 			(effects

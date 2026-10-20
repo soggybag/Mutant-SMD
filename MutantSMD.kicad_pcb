@@ -161,6 +161,18 @@
 				)
 			)
 		)
+		(property "FT Rotation Offset" "180"
+			(at 0 0 90)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "85f08ea0-f0b6-4261-942e-b92a15e00ac3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/ef24350e-aa76-4fdd-a998-3870d72d0c67")
 		(sheetname "Root")
 		(sheetfile "MutantSMD.kicad_sch")
@@ -4594,6 +4606,18 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "49a017dd-0765-4c68-806c-e2c3c416f227")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "FT Rotation Offset" "270"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a802e948-b640-49a7-ad93-1c75f58bbf24")
 			(effects
 				(font
 					(size 1.27 1.27)
