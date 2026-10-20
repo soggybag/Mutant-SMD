@@ -1,0 +1,50 @@
+Reference,Value,Footprint,Side,X mm,Y mm,Rotation,LCSC,Fitted by
+A1,Arduino Nano,Module:Arduino_Nano,back,141.28,75.22,180.0,,hand
+C1,10u,Capacitor_SMD:C_1206_3216Metric,front,137.0,136.3,90.0,C13585,JLC
+C2,10u,Capacitor_SMD:C_1206_3216Metric,front,154.5,136.3,90.0,C13585,JLC
+C3,100n,Capacitor_SMD:C_0805_2012Metric,front,158.0,136.3,90.0,C49678,JLC
+C4,100n,Capacitor_SMD:C_0805_2012Metric,front,122.6,124.39,90.0,C49678,JLC
+C5,100n,Capacitor_SMD:C_0805_2012Metric,front,118.6,124.39,90.0,C49678,JLC
+C6,100n,Capacitor_SMD:C_0805_2012Metric,front,122.6,148.57,90.0,C49678,JLC
+C7,100n,Capacitor_SMD:C_0805_2012Metric,front,118.6,148.57,90.0,C49678,JLC
+C8,100n,Capacitor_SMD:C_0805_2012Metric,front,145.0,124.39,90.0,C49678,JLC
+C9,100n,Capacitor_SMD:C_0805_2012Metric,front,145.0,148.57,90.0,C49678,JLC
+C10,10u,Capacitor_SMD:C_1206_3216Metric,front,151.6,98.5,90.0,C13585,JLC
+C11,100n,Capacitor_SMD:C_0805_2012Metric,front,151.6,102.5,90.0,C49678,JLC
+C12,10n,Capacitor_SMD:C_0805_2012Metric,front,132.0,100.0,90.0,C1710,JLC
+C13,1n,Capacitor_SMD:C_0805_2012Metric,front,137.0,100.0,90.0,C46653,JLC
+C14,10u,Capacitor_SMD:C_1206_3216Metric,front,133.5,84.0,0.0,C13585,JLC
+C15,100n,Capacitor_SMD:C_0805_2012Metric,front,138.6,91.5,90.0,C49678,JLC
+C16,100u,Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B,front,152.0,87.6,90.0,C122271,JLC
+D1,SS14,Diode_SMD:D_SMA,front,131.0,133.8,0.0,C2480,JLC
+D2,SS14,Diode_SMD:D_SMA,front,115.5,61.0,90.0,C2480,JLC
+D3,BAT54S,Package_TO_SOT_SMD:SOT-23,front,122.6,80.5,90.0,C19726,JLC
+J1,EURORACK,Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical,back,121.08,137.77,90.0,,hand
+J2,DC 9V,Connector_BarrelJack:BarrelJack_Horizontal,back,107.0,69.34,-90.0,,hand
+J3,MATRIX IN,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,front,148.3,95.1,180.0,,hand
+J4,MATRIX OUT,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,front,119.01,95.1,180.0,,hand
+J5,OUT,Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,front,159.49,68.67,180.0,,hand
+J6,SYNC IN,Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,front,125.04,68.67,180.0,,hand
+J7,SYNC OUT,Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,front,142.27,68.69,180.0,,hand
+R1,1k,Resistor_SMD:R_0805_2012Metric,front,129.5,100.0,90.0,C17513,JLC
+R2,10k,Resistor_SMD:R_0805_2012Metric,front,134.5,100.0,90.0,C17414,JLC
+R3,100k,Resistor_SMD:R_0805_2012Metric,front,129.5,80.5,90.0,C149504,JLC
+R4,470,Resistor_SMD:R_0805_2012Metric,front,133.5,78.5,0.0,C17710,JLC
+R5,22k,Resistor_SMD:R_0805_2012Metric,front,122.6,75.5,90.0,C17560,JLC
+R6,100k,Resistor_SMD:R_0805_2012Metric,front,122.6,103.5,90.0,C149504,JLC
+R7,1k,Resistor_SMD:R_0805_2012Metric,front,145.0,75.5,90.0,C17513,JLC
+R8,2R2,Resistor_SMD:R_1206_3216Metric,front,151.6,107.4,90.0,C25369,JLC
+RV1,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,126.16,121.89,0.0,,hand
+RV2,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,115.32,126.89,180.0,,hand
+RV3,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,126.16,146.07,0.0,,hand
+RV4,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,115.32,151.07,180.0,,hand
+RV5,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,151.99,121.89,0.0,,hand
+RV6,B10k,Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,front,151.99,146.07,0.0,,hand
+SW1,FUNC,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,107.82,78.72,0.0,,hand
+SW2,TONIC,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,107.82,92.69,0.0,,hand
+SW3,SCALE,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,107.92,106.66,0.0,,hand
+SW4,START,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,159.49,78.72,0.0,,hand
+SW5,REC,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,159.49,92.69,0.0,,hand
+SW6,RETRIG,SuperFreq:SW_Push_Round_D12mm_P5.00mm_DAIER_TSL-A064,front,159.49,106.64,0.0,,hand
+U1,L78M05,Package_TO_SOT_SMD:TO-252-2,front,145.5,136.3,180.0,C58069,JLC
+U2,MCP6002,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,front,133.5,91.5,0.0,C7377,JLC

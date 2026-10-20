@@ -1,0 +1,9 @@
+Designator,Value,Footprint,Qty,Note
+A1,Arduino Nano (ATmega328P),Nano on 2x 1x15 female headers,1,"Back side; socket it, don't solder the Nano"
+J3 J4,MATRIX IN / OUT,1x5 female socket 2.54 mm,2,"Front side: the MAX7219 8x8 module plugs in here (29.3 mm row spacing - check the module)"
+-,MAX7219 8x8 module,single module (DIP or SMD chip),1,"Plugs into J3/J4; not the 4-in-1 FC-16"
+RV1-RV6,B10k,Alpha RD901F-40 9mm vertical,6,"Front side; 100n on each wiper is on the board"
+SW1-SW6,TSL-A064,Tayda A-8796 round 12 mm push button,6,"Front side: FUNC TONIC SCALE START REC RETRIG"
+J5 J6 J7,OUT / SYNC IN / SYNC OUT,Thonkiconn PJ398SM 3.5 mm,3,"Front side"
+J1,EURORACK,2x5 shrouded header,1,"Back side; pin 1 = -12 V (red stripe)"
+J2,DC 9V,2.1 mm DC jack PCB mount,1,"Back side, top-left corner; centre negative. Skip for Eurorack-only builds"
